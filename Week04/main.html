@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>FooCoding Week04 Homework</title>
+  <meta name="Nicola Winterson" content="Mobile Menu">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="logo-wrapper"> 
+      <a href="#!" class="site-logo"><i class="material-icons">cloud</i>Logo</a>
+  </div>
+  <nav>
+      <ul>
+          <li class="nav-bar"><a href="#"><i class="material-icons">home</i></a></li>
+          <li class="nav-bar" onclick="toggleLinks()">
+            <i class="material-icons">menu</i>
+              <ul id="myLinks">
+                  <li class="child-nav-li"><a href="#news">News</a></li>
+                  <li class="child-nav-li"><a href="#">Contact</a></li>
+                  <li class="child-nav-li"><a href="#about">About</a></li>
+              </ul>
+          </li>
+          <li class="nav-bar"><i class="material-icons">search</i>
+            <div id="search-container">
+                <form>
+                  <input type="text" class="search-bar" placeholder="Search..." name="search">
+                  <button type="submit"><i class="material-icons">search</i></button>
+                </form>
+            </div>
+          </li>
+
+          <li class="nav-bar"><a href="#"><i class="material-icons">shopping_cart</i></a></li>
+          
+          <li class="nav-bar" onclick="toggleOtherLinks()">
+              <i class="material-icons">perm_identity</i>
+                <ul id="otherLinks">
+                    <li class="child-nav-li"><a href="#">Manage my account</a></li>
+                    <li class="child-nav-li"><a href="#">Change password</a></li>
+                    <li class="child-nav-li"><a href="#">Settings</a></li>
+                </ul>
+          </li>
+        </ul>
+  </nav>
+
+
+
+  <script src="scripts.js" type="text/javascript"></script>
+</body>
+
+</html>

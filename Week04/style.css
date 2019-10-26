@@ -1,0 +1,106 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(0, 0, 0);
+    /*background: linear-gradient(#e66465, #9198e5);
+    height: 1000px; find a way to apply this in a better way*/
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+
+.logo-wrapper {
+    width: 100vw;
+    height: 8vh;
+    text-align: center;
+    background-color: rgb(68, 155, 126);
+    padding-top: 20px;
+}
+
+.site-logo {
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    clear: both;
+}
+
+.nav-bar {
+    float: left;
+    margin: 0 auto;
+    width: 20vw;
+    text-align: center;
+    background-color: rgb(55, 99, 84);
+    padding: 5px 0px 0px 0px;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+.nav-bar:hover {
+    background-color: rgb(37, 65, 56);
+}
+
+a, .material-icons {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.child-nav-li {
+    padding: 10px 10px 10px 50px;
+    text-align: left;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: rgb(255, 0, 115);
+    text-decoration: underline;
+  }
+   
+a:active {
+    color: rgb(55, 0, 255);
+    text-decoration: underline;
+  }
+
+#myLinks {
+    display: none;
+    overflow: auto;
+    width: 100vw;
+    background-color:  rgb(37, 65, 56);
+    position: relative;
+    margin-left: -20vw;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+#otherLinks {
+    display: none;
+    overflow: auto;
+    width: 100vw;
+    background-color:  rgb(37, 65, 56);
+    position: relative;
+    margin-left: -80vw;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+}
+
+.search-bar {
+    width: 50%;
+}
+
+.search-bar input[type=text] {
+    font-family: 'Quicksand', sans-serif;
+    color: rgba(0, 0, 0, 0.1);
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 20px;
+}
