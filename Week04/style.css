@@ -1,8 +1,8 @@
 body {
     font-family: 'Quicksand', sans-serif;
     color: rgb(0, 0, 0);
-    /*background: linear-gradient(#e66465, #9198e5);
-    height: 1000px; find a way to apply this in a better way*/
+    background: linear-gradient(#e66465, #9198e5);
+    height: 100vh;
     margin: 0px;
     padding: 0px;
     font-size: 20px;
@@ -12,12 +12,17 @@ body {
     width: 100vw;
     height: 8vh;
     text-align: center;
-    background-color: rgb(68, 155, 126);
+    background-color: rgb(68, 109, 155);
     padding-top: 20px;
 }
 
-.site-logo {
+i:active {
+    transform: rotate(90deg);
+    transition:  0.2s;
+}
 
+i::after {
+    transition: 0.2s;
 }
 
 ul {
@@ -30,9 +35,9 @@ ul {
 .nav-bar {
     float: left;
     margin: 0 auto;
-    width: 20vw;
+    width: 25vw;
     text-align: center;
-    background-color: rgb(55, 99, 84);
+    background-color: rgb(47, 75, 107);
     padding: 5px 0px 0px 0px;
     border-width: 1px 0px 0px 0px;
     border-style: solid;
@@ -40,7 +45,7 @@ ul {
 }
 
 .nav-bar:hover {
-    background-color: rgb(37, 65, 56);
+    background-color: rgb(34, 56, 80);
 }
 
 a, .material-icons {
@@ -66,41 +71,32 @@ a:active {
     text-decoration: underline;
   }
 
-#myLinks {
+#menuLinks, #otherLinks, #searchBar, #submenu-nav-li {
     display: none;
     overflow: auto;
     width: 100vw;
-    background-color:  rgb(37, 65, 56);
+    background-color: rgb(34, 56, 80);
     position: relative;
-    margin-left: -20vw;
     border-width: 0px 0px 1px 0px;
     border-style: solid;
     border-color: rgb(0, 0, 0);
 }
 
-#otherLinks {
-    display: none;
-    overflow: auto;
-    width: 100vw;
-    background-color:  rgb(37, 65, 56);
-    position: relative;
-    margin-left: -80vw;
-    border-width: 0px 0px 1px 0px;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
+.search-bar-input {
+    width: 80%;
+    font-family: 'Quicksand', sans-serif;
+    margin: 10px 0px 10px 15px;
+    height: 27px;
 }
 
-.search-bar {
-    width: 50%;
+.search-bar-button {
 }
 
 .search-bar input[type=text] {
     font-family: 'Quicksand', sans-serif;
     color: rgba(0, 0, 0, 0.1);
-    float: right;
     padding: 6px;
     border: none;
-    margin-top: 8px;
-    margin-right: 16px;
     font-size: 20px;
+    margin-left: 10px;
 }
