@@ -112,6 +112,7 @@ h1 {
   }
   #grid-grids li:nth-child(-n + 2) {
     background-color: rgb(110, 89, 89);
+    span: 3;
   }
 }
 
