@@ -150,3 +150,11 @@ console.log("x % 3 =", x)
 10.3 Add console.log statements to the above program in which you show that you understand the concepts (just like you've done in the above assignments).*/
 
 var multipleTypes = ["Nicola", 31];
+console.log("multiple types stored in an array:", multipleTypes);
+var c = 6/0
+var d = 10/0
+if (c === d) {
+    console.log("does equal")
+} else {
+    console.log("not not equal")
+}
