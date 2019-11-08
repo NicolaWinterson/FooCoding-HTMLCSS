@@ -1,13 +1,8 @@
-/**
- * index.scss
- * - Add any styles you want here!
- */
-
  body {
     background-image: linear-gradient(
       to bottom,
       rgb(230, 213, 197),
-      rgb(230, 213, 197) 50%,
+      #e6d5c5 50%,
       rgb(137, 171, 153) 50%
     );
     background-attachment: fixed;
@@ -15,37 +10,7 @@
     z-index: -1;
     font-family: "Roboto", Verdana, Arial;
   }
-  
-  .left-content {
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
-    float: left;
-    width: 26%;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  
-  .right-content {
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
-    float: right;
-    width: 66%;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  
-  .left-list {
-    z-index: 0;
-    float: left;
-    width: 50%;
-  }
-  
-  .right-list {
-    z-index: 0;
-    float: right;
-    width: 50%;
-  }
-  
+    
   .profile-image {
     width: 200px;
     border-radius: 50%;
@@ -87,3 +52,50 @@
     text-align: justify;
   }
   
+  @media all and (max-width: 680px) {
+    .left-content {
+      background-color: rgb(255, 255, 255);
+      z-index: 0;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+  }
+
+  .right-content {
+    background-color: rgb(255, 255, 255);
+    z-index: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  @media all and (min-width: 681px) {
+    .left-content {
+      background-color: rgb(255, 255, 255);
+      z-index: 0;
+      float: left;
+      width: 26%;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    
+    .right-content {
+      background-color: rgb(255, 255, 255);
+      z-index: 0;
+      float: right;
+      width: 66%;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    
+    .left-list {
+      z-index: 0;
+      float: left;
+      width: 50%;
+    }
+    
+    .right-list {
+      z-index: 0;
+      float: right;
+      width: 50%;
+    }
+  }
