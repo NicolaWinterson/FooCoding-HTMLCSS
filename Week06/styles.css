@@ -11,6 +11,11 @@ body {
     font-family: "Roboto", Verdana, Arial;
   }
     
+  #container {
+    background-color: rgb(255, 255, 255);
+    z-index: 0;
+  }
+
   .profile-image {
     width: 200px;
     border-radius: 50%;
@@ -78,40 +83,61 @@ body {
 
   .clear {
     clear: both;
+    overflow: auto;
+  }
+
+  /*TEST TO CREATE LUMPY LINE EFFECT TO GO WOTH LI*/
+  .bar {
+    list-style: none;
+  }
+  .bar >li {
+    position: relative;
+  }
+  .bar>li:before {
+    content: '\25CF';
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  .bar>li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    border-left: 2px solid black;
+    margin-left: 5px;
+    height: 100%;
+  }
+  .bar >li:first-of-type:after {
+    top: 50%;
+  }
+  .bar >li:last-of-type:after {
+    top: -50%;
   }
 
   @media all and (max-width: 680px) {
     .left-content {
-      background-color: rgb(255, 255, 255);
-      z-index: 0;
       padding-left: 2%;
       padding-right: 2%;
     }
 
-  .right-content {
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
+    .right-content {
     padding-left: 2%;
     padding-right: 2%;
   }
 
 }
 
-@media all and (min-width. 681px) {
+@media all and (min-width: 681px) {
   .left-content {
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
-    float: left;
-    width: 24%;
+    /*float: left;
+    width: 24%;*/
     padding-left: 2%;
     padding-right: 2%;
   }
   
   .right-content {
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
-    float: right;
-    width: 60%;
+    /*float: right;
+    width: 60%;*/
     padding-left: 2%;
     padding-right: 2%;
   }
