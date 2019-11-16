@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>Nicola Winterson JS Tests</title>
+
+  <!--  Styles  --> 
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body">
+    <!--  no.1  --> 
+    <hr>
+    <button class="btn">Button n.1</button>
+    <button class="btn">Button n.2</button>
+    <button class="btn">Button n.3</button>
+    
+    <!--  no.2  --> 
+    <hr>
+    <input
+        type="text"
+        id="inp1"
+        placeholder="Type something here..."
+    />
+    <p id="p1">... and live update here</p>
+    <!--  no.3  --> 
+    <hr>
+    <p>The Chat Input</p>
+    <form id="chat" method="post" action="/my-backend-script">
+      <input type="text" id="text-input-box" placeholder="What's on your mind?" autofocus/>
+      <input type="submit" value="Post"/>
+    </form>
+    <hr>
+    <p>DOM Manipulation - Append Child</p>
+    <p id="p2">The text above has been created dynamically.</p>
+
+    <!--  scripts  --> 
+    <script src="script.js"></script>
+</body>
+
+</html>
