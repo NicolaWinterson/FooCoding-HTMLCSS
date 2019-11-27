@@ -8,6 +8,7 @@
 - Week04 - Basic mobile menu Using HTML5, CSS and JavaScript.
 - Week05 - Test of basic JavaScript functions, displayed using console.log statements
 - Week06 - Updated C.v with additional features
+- Week07 - JavaScript tests, primarily work on Browser Events and DOM manipulation
 
 
 
