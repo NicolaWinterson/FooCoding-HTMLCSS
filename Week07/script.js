@@ -1,40 +1,38 @@
-/*onClick alert function*/
+/*JS » OnClick*/
+const button = document.getElementById('btn1');
+const clickHandler = () => {
+  alert('You did it!')
+}
+button.addEventListener('click', clickHandler)
 
-document.getElementById('btn1')
-btn1.addEventListener('click', onClick)
-function onClick() {
-  alert ('You did it!')
+/*JS » Web API*/
+const greenButton = document.getElementById("btn2")
+greenButton.addEventListener("click", toggleButton)
+function toggleButton () {
+  greenButton.classList.toggle("clicked");
 }
 
-/*next challenge*/
+/*JS » Event Context*/
 let allButtons = document.querySelectorAll(".btn")
-
 const changeButton = (change) => {
   change.addEventListener("click", onClick)
   console.log("you did something else")
 }
-
 const onClick = (eventContext) => {
   eventContext.target.classList.toggle("btn--clicked");
 }
-
 allButtons.forEach(changeButton)
 
-/*SECOND PART, ON CHANGE TEXT BOX CHALLENGE*/
+/*JS » OnChange*/
 const onChange = (evt) => {
-    // 1. read from the input
-    // 2. write into the paragraph
     p1.innerHTML = evt.target.value; 
   }
-  
   let textInput = inp1.innerHTML;
   console.log(textInput)
   console.log(onChange)
-  
-  // setup the event handler
   inp1.addEventListener('keyup', onChange)
 
-/*THIRD CHALLENGE - THE CHAT INPUT*/
+/*JS » The Chat Input*/
 const onFormSubmit = (event) => {
     console.log(onFormSubmit)
     //event.preventDefault()
