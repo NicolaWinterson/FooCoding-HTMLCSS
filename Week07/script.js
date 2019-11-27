@@ -1,3 +1,12 @@
+/*onClick alert function*/
+
+document.getElementById('btn1')
+btn1.addEventListener('click', onClick)
+function onClick() {
+  alert ('You did it!')
+}
+
+/*next challenge*/
 let allButtons = document.querySelectorAll(".btn")
 
 const changeButton = (change) => {
@@ -38,8 +47,9 @@ const onFormSubmit = (event) => {
         alert("error, you need to type something")
       } else {
         alert(value)
-        document.getElementById("chat").reset() 
+        document.getElementById("chat").reset()
       }
+      
   }
 
 //const textInput =  
@@ -48,7 +58,7 @@ document
     .addEventListener('submit', onFormSubmit)
 
 /*FOURTH CHALLENGE - CREATING NEW HTML DOM INPUTS*/
-function addElement () { 
+const addElement = () => { 
     // create a new div element 
     var newDiv = document.createElement("div"); 
     // and give it some content 
