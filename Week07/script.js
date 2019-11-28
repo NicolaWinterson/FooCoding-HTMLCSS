@@ -34,37 +34,50 @@ const onChange = (evt) => {
 
 /*JS » The Chat Input*/
 const onFormSubmit = (event) => {
-    console.log(onFormSubmit)
-    //event.preventDefault()
-    //event.stopPropagation()
-    //let textValue = document.getElementById('chat').value
-    //console.log(textValue)
-    let value = document.getElementById("text-input-box").value
-    console.log(value)
-    if (value === "") {
-        alert("error, you need to type something")
-      } else {
-        alert(value)
-        document.getElementById("chat").reset()
-      }
-      
+  event.preventDefault()
+  const textInput = document.querySelector('#chat input[type="text"]')
+  console.log(textInput.value)
+  const form = document.getElementById("chat")
+  //const textInput = document.getElementById("input").value
+  if (textInput.value === '') {
+    alert("oh no! you done did wrong")
+    } else {
+      alert(textInput.value)
+      form.reset()
+     }
+    textInput.focus() 
   }
-
-//const textInput =  
+//event.stopPropagation()
 document
-    .getElementById('chat')
-    .addEventListener('submit', onFormSubmit)
+  .getElementById('chat')
+  .addEventListener('submit', onFormSubmit)
 
-/*FOURTH CHALLENGE - CREATING NEW HTML DOM INPUTS*/
-const addElement = () => { 
-    // create a new div element 
-    var newDiv = document.createElement("div"); 
-    // and give it some content 
-    var newContent = document.createTextNode("Hi there and greetings!"); 
-    // add the text node to the newly created div
-    newDiv.appendChild(newContent);  
-  
-    // add the newly created element and its content into the DOM 
-    var currentDiv = document.getElementById("div1"); 
-    document.body.insertBefore(newDiv, currentDiv); 
-  }
+/*JS » DOM Manipulation*/
+/*JS » Append Child*/
+const newElement = document.createElement("p")
+newElement.innerHTML = "I am a text node that has been created by <em>Nicola</em>!"
+document.body.appendChild(newElement)
+//newElement.insertBefore(createP)
+
+const createP = () => {
+  let newP = document.createElement("p")
+  let newContent = document.createTextNode("Good job")
+  newP.appendChild(newContent)
+  document.body.appendChild(newP)
+}
+const tryItButton = document.getElementById("btn3")
+tryItButton.addEventListener("click", createP)
+
+/*JS » Endless List*/
+
+let clickNum = 1
+const createLi = () => {
+  clickNum += 1;
+  let newLi = document.createElement("li")
+  let newLiText = document.createTextNode("Item No." + clickNum)
+  newLi.appendChild(newLiText)
+  document.getElementById("list1").appendChild(newLiText);
+}
+
+const addNewItemButton = document.getElementById("btn4")
+addNewItemButton.addEventListener("click", createLi)
