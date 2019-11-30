@@ -1,0 +1,8 @@
+.btn {
+    display: block;
+    background: red;
+}
+  
+.btn--clicked {
+    background: green;  
+}
