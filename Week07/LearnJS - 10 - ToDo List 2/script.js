@@ -1,12 +1,4 @@
-/*
-Questions:
-- what about items that exist on the page when the App starts?
-- what about new user created items?
-*/
-
-/**
- * Utility Functions
- */
+ /* Utility Functions*/
 
 const getTodosForm = () =>
   document
@@ -37,10 +29,7 @@ const resetTodosInput = () => {
   input.focus()
 }
 
-
-/**
- * App's Logic
- */
+/* App's Logic*/
 
 const checkStatus = () => {
   const classList = getTodosForm().classList
@@ -60,10 +49,8 @@ const appendMessage = (message) => {
 
 const onSubmit = (evt) => {
   cancelEvent(evt)
-  
   const message = getMessage()
   messageIsValid && appendMessage(message)
-
   resetTodosInput()
 }
 
