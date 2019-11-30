@@ -45,6 +45,7 @@ const appendMessage = (message) => {
   const itemEl = document.createElement('li')
   itemEl.appendChild(textEl)
   getTodosList().appendChild(itemEl)
+  itemEl.addEventListener("click", onClick)
 }
 
 const onSubmit = (evt) => {
