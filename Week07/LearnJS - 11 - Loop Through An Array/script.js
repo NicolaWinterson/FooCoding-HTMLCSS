@@ -21,9 +21,10 @@ const appendItem = (item) => {
   document.getElementById('list1').appendChild(el)
 }
 
-todos.forEach(item => appendItem(item))
-
 /*
 Write here the code so to add all the items of the array
 into the `UL`:
 */
+
+todos.forEach(item => appendItem(item))
+
