@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <title>Nicola Winterson JS Tests</title>
 
-  <!--  Styles  --> 
+  <!--  Styles  -->
 
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,19 +15,25 @@
 
 <body>
 
-    <h3>JS » DOM Manipulation</h3>
+  <h3>JS » DOM Manipulation</h3>
 
-    <hr>
-    <p>» ToDo List</p>
-    <hr>
-    <ul id="list1">
-      <li>Item No.1</li>
-    </ul>
-    <button id="btn4">Add new item</button>
+  <hr>
+  <p>» ToDo List</p>
+  <hr>
+  <p><strong>To do:</strong> </p>
+
+  <div id="todos">
+    <ul></ul>
+    <form method="post" action="/my-backend-script">
+      <input type="text" placeholder="What's next?" />
+      <input type="submit" value="Add" />
+    </form>
+
+  </div>
 
 
-  <!--  scripts  --> 
-    <script src="script.js"></script>
+  <!--  scripts  -->
+  <script src="script.js"></script>
 </body>
 
 </html>
