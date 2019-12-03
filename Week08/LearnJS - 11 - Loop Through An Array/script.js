@@ -2,10 +2,10 @@
 Here is an array, an array is a sorted list of values:
 https://www.javascripttutorial.net/javascript-array/
 */
-const todos = [
-  'buy milk',
-  'clean kitchen',
-  'learn js',
+const myArray = [
+  'First Array Item',
+  'Second Array Item',
+  'Third Array Item',
 ]
 
 /*
@@ -26,5 +26,5 @@ Write here the code so to add all the items of the array
 into the `UL`:
 */
 
-todos.forEach(item => appendItem(item))
+myArray.forEach(item => appendItem(item))
 
