@@ -21,13 +21,15 @@ const renderContent = () => {
     switch (navLocation) {
         case "/":
             content = "Home"
-            subtitle = "you are home"
+            subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             break
         case "/blog":
             content = "Blog"
+            subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             break
         case "/contact":
             content = "Contact"
+            subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             break
         default:
             break;
@@ -42,7 +44,7 @@ const renderContent = () => {
     main.appendChild(newPElement)
 }
 
-//renderContent()
+renderContent()
 clickNavBar()
 console.log(history.length)
 
