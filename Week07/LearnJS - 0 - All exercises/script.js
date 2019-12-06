@@ -1,3 +1,5 @@
+/*JS » Create Functions*/
+
 /*JS » OnClick*/
 const button = document.getElementById('btn1');
 const clickHandler = () => {

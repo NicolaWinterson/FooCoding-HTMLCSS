@@ -28,3 +28,11 @@ into the `UL`:
 
 myArray.forEach(item => appendItem(item))
 
+//basic array operations
+console.log(myArray[1])
+console.log(myArray.length)
+console.log(typeof myArray)
+console.log(Array.isArray(myArray))
+console.log(myArray.valueOf())
+console.log(myArray.toString())
+console.log(myArray.join('|'));
