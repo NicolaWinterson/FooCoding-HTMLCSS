@@ -1,0 +1,7 @@
+body {
+    font-family: 'Roboto', Arial;
+}
+
+li:hover {
+    text-decoration: line-through;
+}
