@@ -35,7 +35,6 @@ const appendDoneItem = (item, index) => {
     });*/
 }
 
-
 const addDoneItems = (item) => {
     //element.preventDefault()
     doneItems.push(item)
@@ -75,12 +74,35 @@ const clearList = () => {
         .forEach(item => item.remove());
 }
 
+/*const toggleHideShow = () => {
+    const toggleDoneItems = document.getElementById("doneItems");
+    if (toggleDoneItems.style.display === "none") {
+        toggleDoneItems.style.display = "block";
+    }   else {
+        toggleDoneItems.style.display = "none";
+    }
+}*/
+
+document.getElementById('todosDone').onclick = function() {
+    const toggleDoneItems = document.getElementById("doneItems");
+    toggleDoneItems.style.display = toggleDoneItems.style.display === 'none' ? 'block' : 'none';
+  };
+
+const appendToDoP = (item) => {
+    const newP = document.createElement('p')
+    const newPText = document.createTextNode(`${doneItems.length} completed task(s)`)
+    newP.appendChild(newPText)
+    document.getElementById('todosDone').appendChild(newP)
+}
+
 console.log(todoItems.indexOf())
+console.log(Array.isArray(doneItems))
 
 document
     .querySelector('#todos form')
     .addEventListener('submit', addItem)
 
 renderList()
+appendToDoP()
 
 

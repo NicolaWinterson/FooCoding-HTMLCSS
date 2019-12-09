@@ -7,7 +7,7 @@
   <title>Nicola Winterson JS Tests</title>
 
   <!--  Styles  -->
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,17 +19,17 @@
   <hr>
   <p>» Array To Do List: 2</p>
   <hr>
-  <p><strong>To do:</strong> </p>
-
+  
   <div id="todos">
-    
     <form id="form" method="post" action="/my-backend-script">
       <input type="text" placeholder="What's next?" />
-      <input type="submit" value="Add" />
+      <input type="submit" value="ADD" />
     </form>
-    <ul></ul>
+    <p><strong>To do:</strong> </p> 
+    <ul id="ultodos"></ul>
   </div>
   <hr>
+  <p id="todosDone"><strong></strong></p>
   <div id="doneItems">
     <ul></ul>
   </div>
