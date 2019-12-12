@@ -19,17 +19,19 @@
   <hr>
   <p>» Array To Do List: 2 v.2</p>
   <hr>
-  
+
   <div id="todos">
-    <form method="post" action="/my-backend-script">
-      <input type="text" placeholder="What's next?" />
+    <form id="form" method="post" action="/my-backend-script">
+      <input type="text" name="todoText" placeholder="What's next?" />
       <input type="submit" value="Add" />
     </form>
+    <div>
+      <input id="checkbox" type="checkbox" />
+      <label>
+        Click to hide or show completed tasks
+      </label>
+    </div>
     <ul></ul>
-    <label>
-      <input type="checkbox" />
-      Click to hide or show completed tasks
-    </label>
   </div>
 
   <!--  scripts  -->
