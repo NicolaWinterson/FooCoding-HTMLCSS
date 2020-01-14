@@ -1,0 +1,61 @@
+body {
+    font-family: 'Roboto';
+    background: url(Floral-Background.jpg);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.main-container {
+    background-color: rgb(255,255,255);
+    background-size: 85%;
+    border: solid black 2px;
+    padding: 30px;
+    z-index: 1;
+}
+
+#left-content {
+    float:left;
+    padding: 20px;
+    width: 29%;
+}
+
+#right-content {
+    float: right;
+    padding: 20px;
+    width: 59%;
+}
+
+.bar {
+    list-style: none;
+  }
+  .bar >li {
+    position: relative;
+  }
+  .bar>li:before {
+    content: '\25CF';
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  .bar>li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    border-left: 2px solid black;
+    margin-left: 5px;
+    height: 100%;
+  }
+  .bar >li:first-of-type:after {
+    top: 50%;
+  }
+  .bar >li:last-of-type:after {
+    top: -50%;
+  }
+
+
+#profile-image {
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    border: solid black 2px;
+}
