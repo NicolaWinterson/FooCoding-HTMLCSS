@@ -1,3 +1,7 @@
+html {
+    height: 100vh;
+}
+
 body {
     /*font-family: 'Abel', sans-serif;*/
     font-family: 'Open Sans Condensed', sans-serif;
@@ -5,14 +9,14 @@ body {
     background-size: cover;
     font-size: 1rem;
     margin: 2%;
+    min-height: 100vh;
     /*position: relative;*/
     /*z-index: -1;*/
 }
 
 .main-container {
     background-color: rgb(255,255,255);
-    width: 95%;
-    height: 95%;
+    width: 95vw;
     position: absolute;
     border: solid black 2px;
     /*z-index: 1;*/
@@ -109,7 +113,7 @@ li .float-right {
     width: 80%;
 }
 
-#text-grid {
+.text-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -163,8 +167,12 @@ summary:after {
 details[open] summary:after {
     content: " ";
 }
-details summary p {
-    margin: -1rem;
+details > p {
+    margin-left: 0rem;
+}
+
+.list-experience {
+    list-style: circle;
 }
 
 /*SKILLS STYLING*/
@@ -202,19 +210,19 @@ details summary p {
 
   @media screen and (max-width: 850px) {
     #left-content {
-        display: block;
+        /*display: block;*/
         padding: 20px;
 
     }
     
     #right-content {
-        display: block;
+        /* display: block; */
         padding: 20px;
     }
 
     .bar {
-        display: block;
-        margin-left: -3.5rem;
+        /* display: block; */
+        margin-left: -5rem;
     }
     #profile-image {
         width: 5em;
@@ -232,3 +240,12 @@ details summary p {
     }
 
   }
+
+  @media print {
+    @page {
+        size: 297mm 210mm; /* landscape */
+    }
+    #achievements {
+        display: none;
+    }
+}
