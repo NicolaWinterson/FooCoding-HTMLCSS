@@ -1,61 +1,234 @@
 body {
-    font-family: 'Roboto';
-    background: url(Floral-Background.jpg);
-    background-size: 100%;
-    z-index: -1;
+    /*font-family: 'Abel', sans-serif;*/
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: url(Floral-Background.jpg) center center;
+    background-size: cover;
+    font-size: 1rem;
+    margin: 2%;
+    /*position: relative;*/
+    /*z-index: -1;*/
 }
 
 .main-container {
     background-color: rgb(255,255,255);
-    background-size: 85%;
+    width: 95%;
+    height: 95%;
+    position: absolute;
     border: solid black 2px;
-    padding: 30px;
-    z-index: 1;
+    /*z-index: 1;*/
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: -2.5rem 1.5rem 0.5rem 2rem;
+}
+
+h5 {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0,0,0);
+}
+
+a:hover, summary:hover {
+    text-decoration: underline;
+    color: rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.social-media-icons {
+    height: 30px;
+    width: 30px;
+}
+
+#social-media-section {
+    margin-top: 50px;
 }
 
 #left-content {
     float:left;
     padding: 20px;
-    width: 29%;
+    width: 30%;
+    height: auto;
+}
+
+#left-content-text {
+    margin-left: 3rem;
 }
 
 #right-content {
     float: right;
     padding: 20px;
-    width: 59%;
+    width: 60%;
+    height: auto;
 }
 
-.bar {
-    list-style: none;
-  }
-  .bar >li {
-    position: relative;
-  }
-  .bar>li:before {
-    content: '\25CF';
-    margin-right: 10px;
-    font-size: 20px;
-  }
-  .bar>li:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: '';
-    border-left: 2px solid black;
-    margin-left: 5px;
-    height: 100%;
-  }
-  .bar >li:first-of-type:after {
-    top: 50%;
-  }
-  .bar >li:last-of-type:after {
-    top: -50%;
-  }
-
+#right-content p {
+    margin: 0rem 3.5rem 1rem 2rem;
+}
 
 #profile-image {
     width: 200px;
     border-radius: 50%;
     display: block;
     border: solid black 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
+
+.li-info {
+    margin-left: 2rem;
+    list-style-type: none;
+}
+
+li .float-left {
+    margin: 0rem 0rem 0rem 0rem;
+    float: left;
+    width: 20%;
+}
+
+li .float-right {
+    float: right;
+    width: 80%;
+}
+
+#text-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.clear {
+    clear:both;
+}
+
+/*CREATING HORIZONTAL LINE WITH BALL SHAPED LI*/
+.bar {
+    list-style: none;  
+}
+
+.bar >li {
+    position: relative;
+    list-style-position: outside;
+    margin-bottom: 2rem;
+}
+.bar>li:before {
+    content: '\25CF';
+    color: rgb(247,63,87);
+    margin-right: 5px;
+    font-size: 30px;
+}
+.bar>li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    border-left: 2px solid black;
+    margin-left: 8px;
+    height: 150%;
+}
+.bar >li:first-of-type:after {
+    top: 50%;
+}
+.bar >li:last-of-type:after {
+    top: -50%;
+}
+
+/*SUMMARY/DETAILS STYLING*/
+
+summary::-webkit-details-marker {
+    display: none
+}
+summary:after {
+    
+    content: " ";
+    float: left;
+}
+details[open] summary:after {
+    content: " ";
+}
+details summary p {
+    margin: -1rem;
+}
+
+/*SKILLS STYLING*/
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+}
+
+.grid-container-left, .grid-container-right {
+    margin-left: 2rem;
+    margin-right: 2.5rem;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    float: right;
+    margin: 0px 1px;
+    /*display: inline-block;*/
+  }
+
+  .empty-dot {
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    float: right;
+    margin: 0px 1px;
+    /*display: inline-block;*/
+  }
+
+  @media screen and (max-width: 850px) {
+    #left-content {
+        display: block;
+        padding: 20px;
+
+    }
+    
+    #right-content {
+        display: block;
+        padding: 20px;
+    }
+
+    .bar {
+        display: block;
+        margin-left: -3.5rem;
+    }
+    #profile-image {
+        width: 5em;
+        border-radius: 50%;
+        display: block;
+        border: solid black 2px;
+        display: block;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: inline;
+    }
+
+  }
