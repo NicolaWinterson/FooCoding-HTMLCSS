@@ -1,3 +1,42 @@
 body {
     font-family: 'Roboto', Arial;
+    font-size: 20px;
+    background-color: rgb(188, 143, 143);
+}
+
+#form {
+    display: flex;
+}
+
+#form input[type="text"],
+#form input[type="submit"] {
+    padding: 5px 10px;
+    border: 1px solid #666;
+    outline: none;
+    font-size: 20px;
+}
+  
+#form input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+#ultodos li {
+    list-style-image: url("/C:/Users/Nicola/AppData/Local/Temp/Temp1_material-design-icons-3.0.1.zip/material-design-icons-3.0.1/toggle/svg/design/ic_check_box_outline_blank_24px.svg");
+}
+
+#doneItems ul li {
+    text-decoration: line-through;
+    list-style-image: url("/C:/Users/Nicola/AppData/Local/Temp/Temp1_material-design-icons-3.0.1.zip/material-design-icons-3.0.1/toggle/svg/design/ic_check_box_24px.svg");
+    filter: grayscale(100%);
+}
+
+#ultodos li:hover {
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+#todosDone, #todosIntro {
+    font-weight: bold; 
 }

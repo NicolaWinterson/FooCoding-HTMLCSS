@@ -17,21 +17,20 @@
   <h3>JS » Data Manipulation</h3>
 
   <hr>
-  <p>» Array To Do List: 2</p>
+  <p>» Array To Do List: 2 v.2</p>
   <hr>
-  
+
   <div id="todos">
     <form id="form" method="post" action="/my-backend-script">
-      <input type="text" placeholder="What's next?" />
-      <input type="submit" value="ADD" />
+      <input type="text" name="todoText" placeholder="What's next?" />
+      <input type="submit" value="Add" />
     </form>
-    <p id="todosIntro"></p> 
-    <ul id="ultodos"></ul>
-  </div>
-  <hr>
-  <p id="todosDone"></p>
-  <div id="doneItems">
-    <p>Done Items:</p>
+    <div>
+      <input id="checkbox" type="checkbox" />
+      <label>
+        Click to hide or show completed tasks
+      </label>
+    </div>
     <ul></ul>
   </div>
 

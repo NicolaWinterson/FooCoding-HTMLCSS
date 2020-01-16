@@ -7,10 +7,11 @@
 - Week03 - Website replication homework, using HTML5 and more advanced CSS features
 - Week04 - Basic mobile menu Using HTML5, CSS and JavaScript.
 - Week05 - Test of basic JavaScript functions, displayed using console.log statements
-- Week06 - Updated C.v with additional features
+- Week06 - Updated C.V. with additional features
 - Week07 - JavaScript tests, primarily work on Browser Events and DOM manipulation
 - Week08 - JavaScript tests, primarily work on data manipulation
 - Week09 - First test of Single Page Applications
+- Week10 - C-V. Emulation Homework
 
 
 

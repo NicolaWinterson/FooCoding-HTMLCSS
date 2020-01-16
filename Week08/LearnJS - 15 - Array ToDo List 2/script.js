@@ -1,12 +1,14 @@
 //step one, create an array
-const todoItems = [
-    'break things',
-    'fix them',
-]
-
+const todoItems = []
 const doneItems = []
 
-console.log(todoItems.length)
+const displayWelcome = () => {
+    if (todoItems.length <= 0) {
+        document.getElementById('todosIntro').innerHTML = "Add a todo item!"
+    } else {
+        document.getElementById('todosIntro').innerHTML = "To Do:"
+    }
+}
 
 const moveToDone = (item) => {
     const index = todoItems.indexOf(item);
@@ -35,7 +37,6 @@ const appendDoneItem = (item, index) => {
     });*/
 }
 
-
 const addDoneItems = (item) => {
     //element.preventDefault()
     doneItems.push(item)
@@ -62,6 +63,8 @@ const addItem = (element) => {
 
 const renderList = () => {
     clearList()
+    appendToDoP()
+    displayWelcome()
     todoItems.forEach(appendItem)
     doneItems.forEach(appendDoneItem)
 }
@@ -75,12 +78,32 @@ const clearList = () => {
         .forEach(item => item.remove());
 }
 
-console.log(todoItems.indexOf())
+/*const toggleHideShow = () => {
+    const toggleDoneItems = document.getElementById("doneItems");
+    if (toggleDoneItems.style.display === "none") {
+        toggleDoneItems.style.display = "block";
+    }   else {
+        toggleDoneItems.style.display = "none";
+    }
+}*/
+
+document.getElementById('todosDone').onclick = function() {
+    const toggleDoneItems = document.getElementById("doneItems");
+    toggleDoneItems.style.display = toggleDoneItems.style.display === 'none' ? 'block' : 'none';
+  };
+
+  const appendToDoP = (item) => {
+    document.getElementById('todosDone').innerHTML = `${doneItems.length} completed task(s) - click to hide or show`
+}    
 
 document
     .querySelector('#todos form')
     .addEventListener('submit', addItem)
 
 renderList()
-
+appendToDoP()
+displayWelcome()
+console.log(todoItems.indexOf())
+console.log(Array.isArray(doneItems))
+console.log(doneItems.length)
 
