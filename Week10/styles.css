@@ -127,7 +127,7 @@ li .float-right {
     list-style: none;  
 }
 
-.bar >li {
+.bar > li {
     position: relative;
     list-style-position: outside;
     margin-bottom: 2rem;
