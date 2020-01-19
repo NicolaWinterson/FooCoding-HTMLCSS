@@ -80,6 +80,8 @@ a:hover, summary:hover {
     padding: 20px;
     width: 60%;
     height: auto;
+    border-left: 2px solid black;
+    margin-left: 8px;
 }
 
 .right-content p {
