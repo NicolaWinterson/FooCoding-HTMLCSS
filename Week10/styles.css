@@ -22,29 +22,29 @@ body {
     /*z-index: 1;*/
 }
 
-h1 {
+body h1 {
     font-size: 3rem;
     text-transform: uppercase;
 }
 
-h4 {
+body h4 {
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 300;
     margin: -2.5rem 1.5rem 0.5rem 2rem;
 }
 
-h5 {
+body h5 {
     font-size: 1rem;
     margin-bottom: 0rem;
 }
 
-ul {
+body ul {
     margin: 0px;
     padding: 0px;
 }
 
-a {
+body a {
     text-decoration: none;
     color: rgb(0,0,0);
 }
@@ -60,29 +60,31 @@ a:hover, summary:hover {
     width: 30px;
 }
 
-#social-media-section {
+.social-media-section {
     margin-top: 50px;
 }
 
-#left-content {
+.left-content {
     float:left;
     padding: 20px;
     width: 30%;
     height: auto;
 }
 
-#left-content-text {
+.left-content-text {
     margin-left: 3rem;
 }
 
-#right-content {
+.right-content {
     float: right;
     padding: 20px;
     width: 60%;
     height: auto;
+    border-left: 2px solid black;
+    margin-left: 8px;
 }
 
-#right-content p {
+.right-content p {
     margin: 0rem 3.5rem 1rem 2rem;
 }
 
@@ -127,18 +129,18 @@ li .float-right {
     list-style: none;  
 }
 
-.bar >li {
+.bar > li {
     position: relative;
     list-style-position: outside;
     margin-bottom: 2rem;
 }
-.bar>li:before {
+.bar > li:before {
     content: '\25CF';
     color: rgb(247,63,87);
     margin-right: 5px;
     font-size: 30px;
 }
-.bar>li:after {
+.bar > li:after {
     position: absolute;
     left: 0;
     top: 0;
@@ -147,10 +149,10 @@ li .float-right {
     margin-left: 8px;
     height: 150%;
 }
-.bar >li:first-of-type:after {
+.bar > li:first-of-type:after {
     top: 50%;
 }
-.bar >li:last-of-type:after {
+.bar > li:last-of-type:after {
     top: -50%;
 }
 
@@ -215,7 +217,7 @@ details > p {
 
     }
     
-    #right-content {
+    .right-content {
         /* display: block; */
         padding: 20px;
     }
