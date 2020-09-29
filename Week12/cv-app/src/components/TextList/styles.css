@@ -1,0 +1,7 @@
+.list-group__item {
+    list-style: circle;
+  }
+  
+  .list-group__child {
+    color: red;
+  }
