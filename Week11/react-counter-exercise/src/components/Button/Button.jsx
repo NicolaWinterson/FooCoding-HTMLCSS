@@ -8,6 +8,7 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
+    className: PropTypes.string,
     label: PropTypes.string,
     onClick: PropTypes.func
 }
