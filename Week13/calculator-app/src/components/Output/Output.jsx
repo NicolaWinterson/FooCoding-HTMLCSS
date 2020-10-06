@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import "./output.css"
 
 export default function Output ({value, onChange}) {
     return (
