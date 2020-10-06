@@ -1,0 +1,8 @@
+.calculator-container {
+    flex: 1;
+    background-color: bisque;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+    padding: 5%;
+}
