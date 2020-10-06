@@ -12,7 +12,8 @@
 - Week08 - JavaScript tests, primarily work on data manipulation
 - Week09 - First test of Single Page Applications
 - Week10 - C-V. Emulation Homework
-- Week11 - C.V. Emulation Homework using ReactJS
+- Week11 - React counter and React form exercises
+- Week12 - C.V. Emulation Homework using ReactJS
 
 
 
