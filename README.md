@@ -14,6 +14,7 @@
 - Week10 - C-V. Emulation Homework
 - Week11 - React counter and React form exercises
 - Week12 - C.V. Emulation Homework using ReactJS
+- Week13 - React calculator exercise
 
 
 
