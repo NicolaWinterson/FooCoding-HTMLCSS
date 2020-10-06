@@ -1,19 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from "./components/Button/Button"
+import Output from "./components/Output/Output"
 import './App.css';
 
 function App() {
+  const [number, setNumber] = useState("")
+  const [value, setValue] = useState("")
+
+  const handleChange = (event) => {
+    setNumber(event.target.value)
+  }
+
+  const logValue = () => {
+    setValue(number)
+    console.log("hello" + number)
+  }
+
   return (
     <div className="App">
       <h1>Calculator app</h1>
-
+      <Output onChange={handleChange} value={number}/>
       <div>
         <Button type="reset" value="CE" />
         <Button type="operand" value="÷" />
       </div>
 
       <div>
-        <Button type="number" value="7" />
+        <Button type="number" onClick={logValue} value="7" />
         <Button type="number" value="8" />
         <Button type="number" value="9" />
         <Button type="operand" value="X" />
