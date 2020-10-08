@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from "../Button/Button"
-import Output from "../Output/Output"
+import Display from "../Display/Display"
 import Row from "../Row/Row"
 import RowItem from "../RowItem/RowItem"
 import "./calculator.css"
@@ -12,7 +12,7 @@ export default function Calculator() {
 
     return (
         <div className="calculator-container">
-            <Output value={data} />
+            <Display value={data} />
             <Row>
                 <RowItem><Button type="reset" value="CE" /></RowItem>
                 <Button type="operand" value="÷" />
@@ -40,6 +40,7 @@ export default function Calculator() {
             </Row>
 
             <Row>
+                <Button type="operand" value="." />
                 <Button type="number" value="0" />
                 <Button type="operand" value="=" />
             </Row>

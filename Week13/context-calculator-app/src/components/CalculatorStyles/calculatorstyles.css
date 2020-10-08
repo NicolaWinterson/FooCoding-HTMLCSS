@@ -1,0 +1,6 @@
+.calculator-styles {
+    background-color: #4abdac;
+    max-width: 100%;
+    display: grid;
+    justify-items: center;
+}
