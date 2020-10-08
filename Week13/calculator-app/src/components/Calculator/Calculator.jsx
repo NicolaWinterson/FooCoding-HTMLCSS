@@ -1,53 +1,48 @@
 import React, { useState } from 'react';
 import Button from "../Button/Button"
 import Output from "../Output/Output"
+import Row from "../Row/Row"
+import RowItem from "../RowItem/RowItem"
 import "./calculator.css"
 
 export default function Calculator() {
-    const [number, setNumber] = useState("")
-    const [value, setValue] = useState("")
+    const [data, setData] = useState("")
 
-    const handleChange = (event) => {
-        setNumber(event.target.value)
-    }
+    const logValue = (event) => setData(data + event.target.value)
 
-    const logValue = () => {
-        setValue(number)
-        console.log("hello" + number)
-    }
     return (
         <div className="calculator-container">
-            <Output onChange={handleChange} value={number} />
-            <div>
-                <Button type="reset" value="CE" />
+            <Output value={data} />
+            <Row>
+                <RowItem><Button type="reset" value="CE" /></RowItem>
                 <Button type="operand" value="÷" />
-            </div>
+            </Row>
 
-            <div>
-                <Button type="number" onClick={logValue} value="7" />
+            <Row>
+                <Button type="number" value="7" onClick={logValue} />
                 <Button type="number" value="8" />
                 <Button type="number" value="9" />
-                <Button type="operand" value="X" />
-            </div>
+                <Button type="operand" value="x" />
+            </Row>
 
-            <div>
+            <Row>
                 <Button type="number" value="4" />
                 <Button type="number" value="5" />
                 <Button type="number" value="6" />
                 <Button type="operand" value="-" />
-            </div>
+            </Row>
 
-            <div>
+            <Row>
                 <Button type="number" value="1" />
                 <Button type="number" value="2" />
                 <Button type="number" value="3" />
                 <Button type="operand" value="+" />
-            </div>
+            </Row>
 
-            <div>
+            <Row>
                 <Button type="number" value="0" />
                 <Button type="operand" value="=" />
-            </div>
+            </Row>
 
 
         </div>

@@ -1,0 +1,26 @@
+.calculator-button {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    border: none;
+    font-size: 20px;
+    color: black;
+}
+
+.calculator-button_reset {
+    background-color: indigo;
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    border: none;
+    font-size: 20px;
+}
+
+.calculator-button_operand {
+    background-color: yellow;
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    border: none;
+    font-size: 20px;
+}

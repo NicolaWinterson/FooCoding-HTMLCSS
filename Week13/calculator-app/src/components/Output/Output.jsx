@@ -4,7 +4,7 @@ import "./output.css"
 
 export default function Output ({value, onChange}) {
     return (
-        <input value={value} onChange={onChange}></input>
+        <input className="calculator-output" value={value} onChange={onChange}></input>
     )
 }
 
