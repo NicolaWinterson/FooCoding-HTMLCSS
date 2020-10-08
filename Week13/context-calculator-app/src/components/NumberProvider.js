@@ -7,7 +7,6 @@ const NumberProvider = props => {
     const [storedNumber, setStoredNumber] = useState('');
     const [functionType, setFunctionType] = useState('');
 
-
     const handleSetDisplayValue = num => {
         if ((!number.includes('.') || num !== '.') && number.length < 8) {
             setNumber(`${(number + num).replace(/^0+/, '')}`);
