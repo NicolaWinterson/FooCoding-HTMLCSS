@@ -9,7 +9,6 @@ function App() {
     <div className="app-container">
       <h1>Calculator app</h1>
       <Calculator />      
-
     </div>
   );
 }

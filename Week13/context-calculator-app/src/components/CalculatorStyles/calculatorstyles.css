@@ -4,3 +4,7 @@
     display: grid;
     justify-items: center;
 }
+
+.white-button {
+    background-color: white;
+}
