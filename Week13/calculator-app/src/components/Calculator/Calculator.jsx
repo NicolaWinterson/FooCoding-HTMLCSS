@@ -27,6 +27,11 @@ export default function Calculator() {
             setOperator(null)
             setPreviousValue(null)
         }
+        if (type === "backspace") {
+            const deletedNumber = currentValue.slice(0, currentValue.length - 1);
+            setCurrentValue(deletedNumber)
+        }
+
         if (type === "equal") {
             const current = parseFloat(currentValue)
             const previous = parseFloat(previousValue)
@@ -55,44 +60,41 @@ export default function Calculator() {
         }
     }
 
-
     return (
         <div className="calculator-container">
-            <div>{currentValue}</div>
             <Display>{currentValue}</Display>
             <Row>
-                <Button type="clear" buttonValue="CE" onPress={() => {handleTap("clear")}} />
-                <Button type="operator" buttonValue="÷" onPress={() => {handleTap("operator", "/")}} />
+                <Button className="calculator-button_reset" type="clear" buttonValue="CE" onPress={() => {handleTap("clear")}} />
+                <Button className="calculator-button_reset_wide" type="clear" buttonValue="<" onPress={() => {handleTap("backspace")}} />               
+                <Button className="calculator-button_operand" type="operator" buttonValue="÷" onPress={() => {handleTap("operator", "/")}} />
             </Row>
             
             <Row>
-                <Button type="number" buttonValue="7" onPress={() => {handleTap("number", 7)}} />
-                <Button type="number" buttonValue="8" onPress={() => {handleTap("number", 8)}} />
-                <Button type="number" buttonValue="9" onPress={() => {handleTap("number", 9)}} />
-                <Button type="operator" buttonValue="x" onPress={() => {handleTap("operator", "*")}} />
+                <Button className="calculator-button" type="number" buttonValue="7" onPress={() => {handleTap("number", 7)}} />
+                <Button className="calculator-button" type="number" buttonValue="8" onPress={() => {handleTap("number", 8)}} />
+                <Button className="calculator-button" type="number" buttonValue="9" onPress={() => {handleTap("number", 9)}} />
+                <Button className="calculator-button_operand" type="operator" buttonValue="x" onPress={() => {handleTap("operator", "*")}} />
             </Row>
 
             <Row>
-                <Button type="number" buttonValue="4" onPress={() => {handleTap("number", 4)}} />
-                <Button type="number" buttonValue="5" onPress={() => {handleTap("number", 5)}} />
-                <Button type="number" buttonValue="6" onPress={() => {handleTap("number", 6)}} />
-                <Button type="operator" buttonValue="-" onPress={() => {handleTap("operator", "-")}} />
+                <Button className="calculator-button" type="number" buttonValue="4" onPress={() => {handleTap("number", 4)}} />
+                <Button className="calculator-button" type="number" buttonValue="5" onPress={() => {handleTap("number", 5)}} />
+                <Button className="calculator-button" type="number" buttonValue="6" onPress={() => {handleTap("number", 6)}} />
+                <Button className="calculator-button_operand" type="operator" buttonValue="-" onPress={() => {handleTap("operator", "-")}} />
             </Row>
 
             <Row>
-                <Button type="number" buttonValue="1" onPress={() => {handleTap("number", 1)}} />
-                <Button type="number" buttonValue="2" onPress={() => {handleTap("number", 2)}} />
-                <Button type="number" buttonValue="3" onPress={() => {handleTap("number", 3)}} />
-                <Button type="operator" buttonValue="+" onPress={() => {handleTap("operator", "+")}} />
+                <Button className="calculator-button" type="number" buttonValue="1" onPress={() => {handleTap("number", 1)}} />
+                <Button className="calculator-button" type="number" buttonValue="2" onPress={() => {handleTap("number", 2)}} />
+                <Button className="calculator-button" type="number" buttonValue="3" onPress={() => {handleTap("number", 3)}} />
+                <Button className="calculator-button_operand" type="operator" buttonValue="+" onPress={() => {handleTap("operator", "+")}} />
             </Row>
 
             <Row>
-                <Button type="operator" buttonValue="." onPress={() => {handleTap("number", ".")}} />
-                <Button type="number" buttonValue="0" onPress={() => {handleTap("number", 0)}} />
-                <Button type="operator" buttonValue="=" onPress={() => {handleTap("equal")}} />
+                <Button className="calculator-button_operand" type="operator" buttonValue="." onPress={() => {handleTap("number", ".")}} />
+                <Button className="calculator-button_wide" type="number" buttonValue="0" onPress={() => {handleTap("number", 0)}} />
+                <Button className="calculator-button_operand" type="operator" buttonValue="=" onPress={() => {handleTap("equal")}} />
             </Row>
-
-
         </div>
     )
 

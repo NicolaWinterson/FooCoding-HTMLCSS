@@ -2,13 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./display.css"
 
-export default function Output ({value, onChange}) {
+export default function Display ({ children }) {
     return (
-        <div className="calculator-output" value={value} onChange={onChange}></div>
+    <div className="calculator-output">{children}</div>
     )
 }
 
-Output.propTypes = {
+Display.propTypes = {
     value: PropTypes.string,
-    onChange: PropTypes.func
 }

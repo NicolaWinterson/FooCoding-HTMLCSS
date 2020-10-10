@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
 .calculator-button {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #fff;
     width: 75px;
     height: 75px;
     margin: 0;
@@ -8,7 +12,7 @@
 }
 
 .calculator-button_reset {
-    background-color: indigo;
+    background-color: #ffb766;
     width: 75px;
     height: 75px;
     margin: 0;
@@ -16,11 +20,19 @@
     font-size: 20px;
 }
 
+.calculator-button_reset:active {
+    background-color: #f43a09;
+}
+
 .calculator-button_operand {
-    background-color: yellow;
+    background-color: #c2edda;
     width: 75px;
     height: 75px;
     margin: 0;
     border: none;
     font-size: 20px;
+}
+
+.calculator-button_operand:active {
+    background-color: #68d388;
 }
