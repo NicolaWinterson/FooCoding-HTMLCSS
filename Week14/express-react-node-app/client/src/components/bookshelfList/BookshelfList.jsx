@@ -50,10 +50,7 @@ const BookshelfList = (props) => {
 
 BookshelfList.propTypes = {
     id: PropTypes.string,
-    author: PropTypes.string,
-    title: PropTypes.func,
-    pubDate: PropTypes.string,
-    rating: PropTypes.string
+    handleBookRemove: PropTypes.func
 }
 
 export default BookshelfList
