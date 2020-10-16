@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Bookshelf from "./components/bookshelf/Bookshelf";
 import './App.css';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
     <div className="App">
       <h1>Users</h1>
       {hello.map(user => user.username)}
+      <Bookshelf />
     </div>
   );
 }
