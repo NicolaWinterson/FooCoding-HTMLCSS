@@ -3,12 +3,13 @@ import PropTypes from "prop-types"
 
 export default function BookshelfListRow (props) {
 
-    console.log("******BOOKS", props.book)
+    /* console.log("******BOOKS", props.book) */
     /* const handleBookRemove = (id, title) => void */
     
     return(
     <tr className="table-row">
         <td className="table-item">{props.position}</td>
+        <td className="table-item"> <img src={props.thumbnail} /> </td>
         <td className="table-item">{props.book.title}</td>
         <td className="table-item">{props.book.author}</td>
         <td className="table-item">{props.book.pubDate}</td>
@@ -25,6 +26,7 @@ export default function BookshelfListRow (props) {
 
 BookshelfListRow.propTypes = {
     position: PropTypes.number,
+    thumbnail: PropTypes.string,
     author: PropTypes.string,
     title: PropTypes.string,
     pubDate: PropTypes.number,

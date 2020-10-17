@@ -5,6 +5,7 @@ import './App.css';
 const App = () => {
   
   const [hello, setHello] = useState([{"id":1,"username":"non"},{"id":2,"username":"nnon"}])
+  
   const callAPI = () => {
     fetch('/users')
       .then(res => res.json())

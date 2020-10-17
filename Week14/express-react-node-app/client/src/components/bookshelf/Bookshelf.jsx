@@ -10,6 +10,8 @@ const BookShelf = () => {
     const [rating, setRating] = useState('')
     const [books, setBooks] = useState([])
     const [loading, setLoading] = useState(true)
+    const [search, setSearch] = useState('');
+    const [searchResult, setSearchResult] = useState('');
 
     useEffect(() => {
         fetchBooks()
@@ -17,9 +19,10 @@ const BookShelf = () => {
 
     const fetchBooks = async () => {
         axios
-            .get('/books/all')
+            .get('http://localhost:4000/books/all')
             .then(response => {
                 setBooks(response.data)
+               
                 setLoading(false)
             })
             .catch(error => console.error(`There was an error retrieving the book list: ${error}`))
@@ -30,6 +33,7 @@ const BookShelf = () => {
         setTitle('')
         setPubDate('')
         setRating('')
+        setSearch('')
     }
 
     const handleBookCreate = () => {
@@ -74,9 +78,41 @@ const BookShelf = () => {
             })
             .catch(error => console.error(`There was a problem resetting the book list: ${error}`))
     }
+
+    const handleBookSearch = async () => {
+        console.log("you searched")
+        axios
+            .get('http://localhost:4000/search')
+            .then(response => {
+                setSearchResult(response.data)
+                console.log("setSearch", response.data)
+                setLoading(false)
+                handleInputReset()
+            })
+    
+            .catch(error => console.error(`There was an error searching: ${error}`))
+    }
+
+    const handleBookSearchAdd = (id, title) => {
+        console.log("handleBookSearchAdd")
+        /* axios
+            .get('http://localhost:4000/books/delete', { id: id })
+            .then(() => {
+                console.log(`Book ${title} was removed.`)
+                fetchBooks()
+            })
+            .catch(error => console.error(`There was a problem removing the ${title} book: ${error}`)) */
+    }
+
     return (
         <div className="book-list-wrapper">
             <div className="book-list-form">
+                <div>
+                    <label className="form-label" htmlFor="author">Search book:</label>
+                    <input className="form-input" type="text" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
+                    <button onClick={handleBookSearch} className="btn btn-add">Search books</button>
+                    <BookshelfList books={searchResult} thumbnail={searchResult} loading={loading} handleBookRemove={handleBookSearchAdd} />
+                </div>
                 <div className="form-wrapper" onSubmit={handleBookSubmit}>
                     <div className="form-row">
                         <fieldset>
@@ -96,7 +132,7 @@ const BookShelf = () => {
                         </fieldset>
 
                         <fieldset>
-                            <label className="form-label" htmlFor="rating">Enter rating:</label>
+                            <label className="form-label" htmlFor="rating">Enter your rating:</label>
                             <input className="form-input" type="number" id="rating" name="rating" value={rating} onChange={(e) => setRating(e.currentTarget.value)} />
                         </fieldset>
                     </div>
