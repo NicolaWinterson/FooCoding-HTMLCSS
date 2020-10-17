@@ -13,15 +13,11 @@ const BookshelfList = ({ books, loading , handleBookRemove }) => {
             <thead>
                 <tr>
                     <th className="table-head-item" />
-
+                    <th className="table-head-item">Thumbnail</th>
                     <th className="table-head-item">Title</th>
-
                     <th className="table-head-item">Author</th>
-
                     <th className="table-head-item">Pub. date</th>
-
                     <th className="table-head-item">Rating</th>
-
                     <th className="table-head-item" />
                 </tr>
             </thead>

@@ -9,7 +9,7 @@ export default function BookshelfListRow (props) {
     return(
     <tr className="table-row">
         <td className="table-item">{props.position}</td>
-        <td className="table-item"> <img src={props.thumbnail} /> </td>
+        <td className="table-item"> <img src={props.book.thumbnail} alt=":-/" /> </td>
         <td className="table-item">{props.book.title}</td>
         <td className="table-item">{props.book.author}</td>
         <td className="table-item">{props.book.pubDate}</td>

@@ -1,20 +1,25 @@
 var express = require('express');
 var axios = require('axios')
+var fs = require('fs')
+
 var router = express.Router();
 
-/* GET users listing. */
 router.get('/', function (req, res, next) {
-  console.log("got a request ", req.params)
 
-  axios.get('https://www.googleapis.com/books/v1/volumes?q=quilting&key=AIzaSyB3Mi3c016RPPWHx4c99JacOFmOEEpD0wM')
+  var API_KEY = fs.readFileSync("./environment-keys", 'utf8')
+
+  console.log("Read API-KEY from file: environment-keys ", typeof API_KEY, API_KEY)
+
+  let searchTerm = req.query.searchTerm
+  axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=${API_KEY}`)
     .then(result => result.data)
     .then(data => {
       console.log("got  many responses:  ", data.totalItems)
       return data.items
     })
     .then(items => {
-      console.log("items:  ", items)
-      const books = items.map(item =>  convertToBook(item))
+      // console.log("items:  ", items)
+      const books = items.map(item => convertToBook(item))
       console.log("books:  ", books)
       res.json(books);
     })
@@ -23,20 +28,20 @@ router.get('/', function (req, res, next) {
 });
 
 function convertToBook(item) {
-  console.log("authors:" ,item.volumeInfo.authors)
+  console.log("authors:", item.volumeInfo.authors)
   let authors = item.volumeInfo.authors
   let author = ""
 
   if (authors === undefined) {
-    author= ""
+    author = ""
   } else {
-    author= authors[0]
+    author = authors[0]
   }
 
   return {
     "title": item.volumeInfo.title,
     "author": author,
-    "pubDate": item.volumeInfo.publishedDate, 
+    "pubDate": item.volumeInfo.publishedDate,
     "thumbnail": item.volumeInfo.imageLinks.smallThumbnail
   };
 }

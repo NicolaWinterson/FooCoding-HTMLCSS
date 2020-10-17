@@ -82,7 +82,7 @@ const BookShelf = () => {
     const handleBookSearch = async () => {
         console.log("you searched")
         axios
-            .get('http://localhost:4000/search')
+            .get(`http://localhost:4000/search?searchTerm=${search}` )
             .then(response => {
                 setSearchResult(response.data)
                 console.log("setSearch", response.data)
@@ -111,7 +111,7 @@ const BookShelf = () => {
                     <label className="form-label" htmlFor="author">Search book:</label>
                     <input className="form-input" type="text" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
                     <button onClick={handleBookSearch} className="btn btn-add">Search books</button>
-                    <BookshelfList books={searchResult} thumbnail={searchResult} loading={loading} handleBookRemove={handleBookSearchAdd} />
+                    <BookshelfList books={searchResult} loading={loading} handleBookRemove={handleBookSearchAdd} />
                 </div>
                 <div className="form-wrapper" onSubmit={handleBookSubmit}>
                     <div className="form-row">
