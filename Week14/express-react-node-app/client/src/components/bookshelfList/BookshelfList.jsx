@@ -4,10 +4,10 @@ import BookshelfListRow from '../bookshelfListRow/BookshelfListRow'
 import './bookshelf-list.css'
 
 
-const BookshelfList = (props) => {
+const BookshelfList = ({ books, loading , handleBookRemove }) => {
 
-    if (props.loading) return <p>Books are loading...</p>
-
+    if (loading) return <p>Books are loading...</p>
+    
     return (
         <table className="table">
             <thead>
@@ -27,13 +27,14 @@ const BookshelfList = (props) => {
             </thead>
 
             <tbody className="table-body">
-                {props.books.length > 0 ? (
-                    props.books.map((book, idx) => (
+                {books.length > 0 ? (
+                    books.map((book, index) => (
+                        
                         <BookshelfListRow
-                            key={book.id}
+                            key={book.id} 
                             book={book}
-                            position={idx + 1}
-                            handleBookRemove={props.handleBookRemove}
+                            position={index + 1}
+                            handleBookRemove={handleBookRemove}
                         />
                     )
                     )

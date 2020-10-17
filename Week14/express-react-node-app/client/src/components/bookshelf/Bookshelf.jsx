@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react"
-import PropTypes from "prop-types"
 import axios from "axios"
-
 import BookshelfList from '../bookshelfList/BookshelfList'
 import './bookshelf.css'
 
@@ -19,7 +17,7 @@ const BookShelf = () => {
 
     const fetchBooks = async () => {
         axios
-            .get('http://localhost:4001/books/all')
+            .get('/books/all')
             .then(response => {
                 setBooks(response.data)
                 setLoading(false)
@@ -36,7 +34,8 @@ const BookShelf = () => {
 
     const handleBookCreate = () => {
         axios
-            .post('http://localhost:4001/books/create', {
+            /* TODO: figure out why there is no cors issue */
+            .post('http://localhost:4000/books/create', {
                 author: author,
                 title: title,
                 pubDate: pubDate,
@@ -59,7 +58,7 @@ const BookShelf = () => {
 
     const handleBookRemove = (id, title) => {
         axios
-            .put('http://localhost:4001/books/delete', { id: id })
+            .put('http://localhost:4000/books/delete', { id: id })
             .then(() => {
                 console.log(`Book ${title} was removed.`)
                 fetchBooks()
@@ -69,7 +68,7 @@ const BookShelf = () => {
 
     const handleListReset = () => {
         axios
-            .put('http://localhost:4001/books/reset')
+            .put('http://localhost:4000/books/reset')
             .then(() => {
                 fetchBooks()
             })
@@ -93,12 +92,12 @@ const BookShelf = () => {
                     <div className="form-row">
                         <fieldset>
                             <label className="form-label" htmlFor="pubDate">Enter publication date:</label>
-                            <input className="form-input" type="text" id="pubDate" name="pubDate" value={pubDate} onChange={(e) => setPubDate(e.currentTarget.value)} />
+                            <input className="form-input" type="number" id="pubDate" name="pubDate" value={pubDate} onChange={(e) => setPubDate(e.currentTarget.value)} />
                         </fieldset>
 
                         <fieldset>
                             <label className="form-label" htmlFor="rating">Enter rating:</label>
-                            <input className="form-input" type="text" id="rating" name="rating" value={rating} onChange={(e) => setRating(e.currentTarget.value)} />
+                            <input className="form-input" type="number" id="rating" name="rating" value={rating} onChange={(e) => setRating(e.currentTarget.value)} />
                         </fieldset>
                     </div>
                 </div>

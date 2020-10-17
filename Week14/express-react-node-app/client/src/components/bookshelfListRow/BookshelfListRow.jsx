@@ -3,28 +3,30 @@ import PropTypes from "prop-types"
 
 export default function BookshelfListRow (props) {
 
+    console.log("******BOOKS", props.book)
     /* const handleBookRemove = (id, title) => void */
     
     return(
     <tr className="table-row">
         <td className="table-item">{props.position}</td>
-        <td className="table-item">{props.books.title}</td>
-        <td className="table-item">{props.books.pubDate}</td>
-        <td className="table-item">{props.books.rating}</td>
+        <td className="table-item">{props.book.title}</td>
+        <td className="table-item">{props.book.author}</td>
+        <td className="table-item">{props.book.pubDate}</td>
+        <td className="table-item">{props.book.rating}</td>
         <td className="table-item">
             <button
                     className="table-item"
-                    onClick={/* () => props.handleBookRemove(props.book.id, props.book.title)*/ props.onClick}> 
-                Remove Book
+                    onClick={() => props.handleBookRemove(props.book.id, props.book.title)}> 
+                Remove
             </button>
         </td>
     </tr>
 ) }
 
 BookshelfListRow.propTypes = {
-    id: PropTypes.string,
+    position: PropTypes.number,
     author: PropTypes.string,
-    title: PropTypes.func,
-    pubDate: PropTypes.string,
-    rating: PropTypes.string
+    title: PropTypes.string,
+    pubDate: PropTypes.number,
+    rating: PropTypes.number
 }
