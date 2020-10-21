@@ -8,7 +8,8 @@ router.get('/', function (req, res, next) {
 
   var API_KEY = fs.readFileSync("./environment-keys", 'utf8')
 
-  console.log("Read API-KEY from file: environment-keys ", typeof API_KEY, API_KEY)
+  /* const REACT_APP_API_KEY= process.env.REACT_APP_API */
+  /*   console.log("Read API-KEY from file: environment-keys ", typeof API_KEY, API_KEY) */
 
   let searchTerm = req.query.searchTerm
   axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=${API_KEY}`)
