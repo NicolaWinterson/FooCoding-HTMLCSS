@@ -1,0 +1,1 @@
+SELECT * FROM world_foocoding.city_foo;
