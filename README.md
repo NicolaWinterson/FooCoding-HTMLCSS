@@ -16,6 +16,7 @@
 - Week12 - C.V. Emulation Homework using ReactJS
 - Week13 - React calculator exercise
 - Week14 - Custom API app with useEffect
+- Week15 - basic DB creation, editing, querying
 
 
 
