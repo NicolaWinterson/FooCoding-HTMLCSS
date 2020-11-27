@@ -2,7 +2,6 @@ const fs = require("fs")
 const process = require('process')
 
 const fileName = "data.json"
-/* fs.readFileSync(fileName) */
 
 let data
 
@@ -34,8 +33,6 @@ const writeFile = async function(data) {
 async function init() {
     
     const arguments = process.argv.slice(2) //everything that is after index 1, which is an array
-    
-    /* const testIndex = arguments.indexOf("-test") */
 
     switch(arguments[0]) {
         case 'list': {
@@ -68,9 +65,13 @@ async function init() {
             //node index.js update 3 "Brush teeth"
             let data = await readFile()
             let grabArgument = arguments.slice(1)
-            let existingEl = grabArgument[0]
-            updatedEl = data.splice(existingEl);
-            console.log("you updated the todo: " + existingEl + " to: " + updatedEl);
+            let number = grabArgument[0]
+            let actualNumber = parseInt(number)
+            let text = grabArgument[1]
+            console.log("argument received: " + number)
+            console.log("text received: " + text)
+            let spliced = data.splice(actualNumber, 1, text)
+            console.log("you updated the todo: " + spliced + " and replaced it with: " + text)
             await writeFile(data)
             break;
         }
