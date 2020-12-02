@@ -1,0 +1,16 @@
+{
+  "name": "foocoding-week18-homework",
+  "version": "1.0.1",
+  "description": "Node.js Week 3 - To-Do App",
+  "main": "src/index.js",
+  "author": "Nicola Winterson",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {}
+}
