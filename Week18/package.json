@@ -6,9 +6,10 @@
   "author": "Nicola Winterson",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node index.js"
   },
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "uuid": "^3.2.1"
   },

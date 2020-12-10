@@ -1,0 +1,17 @@
+{
+  "name": "node-sql-foocoding",
+  "version": "1.0.0",
+  "description": "node-sql-foocoding",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mysql2": "^2.2.5",
+    "node": "^15.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm index.js"
+  },
+  "author": "Nicola Winterson",
+  "license": "ISC"
+}
