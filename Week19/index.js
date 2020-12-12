@@ -104,6 +104,19 @@ async function init() {
         }
       );
       break;
+
+      /* 
+      SELECT c1.Name, c2.Name, c1.Region, c2.Region, cl1.Language, cl2.Language FROM country AS c1, country AS c2, countrylanguage AS cl1, countrylanguage AS cl2
+      INNER JOIN country ON CountryCode = Code
+      WHERE c1.Region = c2.Region
+      AND c1.Code != c2.Code 
+      AND cl1.IsOfficial = "T"
+      AND cl2.IsOfficial = "T"
+      AND cl1.Language = cl2.Language 
+      AND c1.GNP < "1000" AND c2.GNP < "1000" #trying´to be beteref fek
+      GROUP BY c1.Name;
+      */
+
     }
 
     case 'help': {
