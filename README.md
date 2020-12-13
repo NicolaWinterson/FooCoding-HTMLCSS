@@ -18,6 +18,8 @@
 - Week14 - Custom API app with useEffect
 - Week15 - Basic DB creation, editing, querying
 - Week16 - Testing NODE.js files with if/else if
-
+- Week17 - mySQL queries on database and insert into database
+- Week18 - node.js
+- Week19 - mySQL and node.js prepared statements to query the database 
 
 
